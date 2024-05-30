@@ -42,7 +42,7 @@ create-react-app 支持 "自動化建構"、"模組管理"、"代碼分割" 等�
 * Node >= 14.00
 * npm  >= 5.6
 
-![alt text](image.png)
+![alt text](ch1_img/image.png)
 
 
 萬事俱備之後，就可以使用以下指令建立專案了！
@@ -52,9 +52,9 @@ npx create-react-app tic-tac-toe
 ```
 * 實作我放在 Repository [React_implement](https://github.com/chullin/React_implement)
 
-![alt text](image-1.png)
+![alt text](ch1_img/image-1.png)
 
-![alt text](image-2.png)
+![alt text](ch1_img/image-2.png)
 沒想到要跑蠻久的，大概 5 分鐘?
 
 太好玩了吧?! 跟著書一起做真的覺得很容易呢！
@@ -68,22 +68,22 @@ npm start
 
 就會自己跳出瀏覽器
 
-![alt text](image-3.png)
+![alt text](ch1_img/image-3.png)
 
 啟用成功！
 
 創建好後，資料夾檔案內容如下
 
-![alt text](image-4.png)
+![alt text](ch1_img/image-4.png)
 
 index.html 是裡面唯一一個 html 檔
 另一個重要的檔案在 src 裡面的 index.js
 
 在這個 index.js 中使用 ReactDOM 物件中的 createRoot() 將 React 元素顯示到 index.html 中相對應的 id (id=root) 中
 
-![alt text](image-5.png)
+![alt text](ch1_img/image-5.png)
 
-![alt text](image-6.png)
+![alt text](ch1_img/image-6.png)
 
 而下面
 
@@ -94,7 +94,7 @@ index.html 是裡面唯一一個 html 檔
 ```
 是用於引入 App.js 這個檔案的程式碼
 
-![alt text](image-7.png)
+![alt text](ch1_img/image-7.png)
 
 這一頁裡面所描述的 JSX (JSX 在語法上看起來與HTML 相近，但它其實是JavaScript 的語法擴展)
 所描述的就是我們啟動本機伺服器後，在網址輸入 localhost:3000 看到的內容。所以接下來我們圈圈叉叉遊戲就是要改掉這一頁的內容
@@ -130,18 +130,18 @@ ESLint 是一個檢查程式碼品質的工具，他可以用於檢查程式碼�
 npm install eslint -g
 ```
 
-![alt text](image-8.png)
+![alt text](ch1_img/image-8.png)
 
 安裝好後先初始化
 ```JS
 eslint --init
 ```
-![alt text](image-10.png)
+![alt text](ch1_img/image-10.png)
 雖然一樣跳出很多 warnning，但似乎是安裝好了，不管它
 
 輸入 `init` 之後就會開始詢問你問題
 
-![alt text](image-9.png)
+![alt text](ch1_img/image-9.png)
 會依序問很多問題，詳看書上內容，雖然還是有一點點不一樣，像是其中問要安裝 版本8 還是 版本9
 
 然後沒有問要不要用 JSON

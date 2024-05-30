@@ -6,7 +6,7 @@
 是 node.js 的預設套件管理工具
 像是 python 中的 pip
 
-是在 npm v5.2.0 之後內建的指令，可以自動安裝 package 並執行內部的指令
+npx 是在 npm v5.2.0 之後內建的指令，可以自動安裝 package 並執行內部的指令
 
 不需要手動安裝或指定完整路徑
 使用方式很簡單，只需要輸入
@@ -115,4 +115,68 @@ ESLint 是一個檢查程式碼品質的工具，他可以用於檢查程式碼�
     * 是否使用了沒有宣告的變數、是否少了括號等等常見的語法錯誤
 * 確保遵循最佳實踐
     * 不使用全域變數、建議使用 === 而非 ==、不使用 eval 等等
-* 
+* 提醒你刪掉多餘的程式碼
+    * 宣告了沒有使用的變數、import 沒有使用的模組、空的 class constructor 等等
+* 統一基本的 coding style
+    * 要不要加分號、使用單引號或雙引號、縮排使用 space 或 tab 等等
+
+
+### 安裝 ESLint
+
+它提供了一耶方便的指令與工具，讓我們可以透過選擇選項的方式照自己需求設定，因此先全域安裝 ESLint
+
+### 好像要在專案底下安裝
+```JS
+npm install eslint -g
+```
+
+![alt text](image-8.png)
+
+安裝好後先初始化
+```JS
+eslint --init
+```
+![alt text](image-10.png)
+雖然一樣跳出很多 warnning，但似乎是安裝好了，不管它
+
+輸入 `init` 之後就會開始詢問你問題
+
+![alt text](image-9.png)
+會依序問很多問題，詳看書上內容，雖然還是有一點點不一樣，像是其中問要安裝 版本8 還是 版本9
+
+然後沒有問要不要用 JSON
+
+然後目前因為減少複雜度，所以沒有使用 TypeScript
+
+ESLint 有很多客製化規定可以調整，但似乎改版了，跟書上不一樣
+
+### styled-components
+styled-components 是一個 CSS-In-JS 函式庫，讓你可以在 JSX 中撰寫 CSS code
+
+* 它可以幫我們做到 CSS 不容易做到的 條件式判斷
+* CSS 的樣式跟 JSX 沒有違和感，套用 CSS 樣式就像是寫其他 React 元件一樣，像是父原件可以透過 props 做動態調整
+* CSS-In-JS 還幫我們解決「命名衝突」的問題，它將 class name 做 hash 成為唯一的名稱
+* 它也有提供 ThemeProvider 這樣一個外層的 component 來幫助我們實踐換網站主題設計的系統。可以直接在 Render 時直接傳到整個 App 每一個 Components 及 styled-components
+
+書中有舉例，這邊就略
+
+安裝 style-components
+```JS
+npm install --save styled-components
+```
+
+剛剛雖然提過它有避免命名衝突的好處，但在 debug 的時候就會有點痛苦，所有 class 都是 hash 值，完全沒有識別度
+因此，如果專案是使用 create-react-app 可以將
+styled-components
+改為
+styled-components/macro
+
+```JS
+// 原本的
+import styled from 'styled-components';
+
+// 改成
+import styled from 'styled-components/macro'
+```
+
+這樣 DOM 結構上就不會只有 hash 過的 class name，還會有可辨識、可讀性高的名稱了

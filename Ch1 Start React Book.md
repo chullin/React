@@ -22,7 +22,7 @@ npx package name
 
 
 ### 使用 create-react-app 創建一個專案
-creat-react-app 是 Facebook 設計的建立 React.js 開發環境的套件
+create-react-app 是 Facebook 設計的建立 React.js 開發環境的套件
 
 只需要一行指令就可以快速建立一個 React
 
@@ -30,7 +30,7 @@ creat-react-app 是 Facebook 設計的建立 React.js 開發環境的套件
 
 簡單來說不需要自己設置安裝，就可以使用最新的 ES6 語法等等
 
-creat-react-app 支持 "自動化建構"、"模組管理"、"代碼分割" 等等功能
+create-react-app 支持 "自動化建構"、"模組管理"、"代碼分割" 等等功能
 還提供 "開發伺服器"，可以在本地端測試應用程式
 
 只需要輸入
